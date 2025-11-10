@@ -1,50 +1,48 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 
+
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        navy: "#222222",
+        gold: "#DEC05F",
+        offwhite: "#F5F5DC",
+      },
+    },
+  },
+};
+
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: [
-        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        './storage/framework/views/*.php',
-        './resources/views/**/*.blade.php',
-        './resources/js/**/*.jsx',
-    ],
-
-    theme: {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+ theme: {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
-        },
-    },
-    theme: {
-        extend: {
+            keyframes: {
+                'fade-in-up': {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+            },
+            animation: {
+                'fade-in-up': 'fade-in-up 0.7s ease-out forwards',
+            },
             colors: {
-                navy: "#222222",     // Primary text and dark background (Trust)
-                gold: "#DEC05F",     // Call-to-Action buttons (Luxury Accent)
-                offwhite: "#F5F5DC", // Main background (Clean White)
+                navy: "#222222",
+                gold: "#DEC05F",
+                offwhite: "#F5F5DC",
             },
         },
     },
-
-    keyframes: {
-        'fade-in-up': {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(20px)',
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
-        }
-      },
-
-    
-      // 3. Define the custom animation utility class
-      animation: {
-        'fade-in-up': 'fade-in-up 0.7s ease-out forwards',
-      },
+ 
+ 
 
     plugins: [forms],
-};
+}
