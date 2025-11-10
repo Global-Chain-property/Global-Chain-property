@@ -6,7 +6,7 @@ const benefitsData = [
   {
     icon: Globe,       
     title: 'Global Access',
-    description: 'Invest in properties worldwide from your phone',
+    description: 'Invest in properties worldwide from your phone or laptop',
   },
   {
     icon: DollarSign,   
@@ -16,7 +16,7 @@ const benefitsData = [
   {
     icon: Lock,         
     title: 'Secure Ownership',
-    description: 'Your ownership is recorded and protected',
+    description: 'Your ownership is recorded and protected on the blockchain as NFT',
   },
   {
     icon: TrendingUp,   

@@ -61,7 +61,7 @@ const HowItWorks = () => {
             <div 
               key={index} 
               className={`
-                bg-[#F5F5DC] p-8 rounded-xl shadow-xl shadow-[#DEC05F]/40  hover:shadow-2xl transition duration-500
+                bg-[#F5F5DC] p-8 rounded-xl shadow-xl shadow-[#DEC05F]/60  hover:shadow-2xl transition duration-500
                 transform hover:-translate-y-1 
                 animate-fade-in-up 
               `}
